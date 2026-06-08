@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haridwar University</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Top Bar */
+
+.top-bar{
+    background:#1e2d73;
+    color:white;
+    padding:12px 30px;
+}
+
+.top-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+.top-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+/* Navbar */
+
+.navbar{
+    background:white;
+    border-bottom:5px solid #6cb33f;
+    padding:12px 30px;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:60px;
+}
+
+.logo-content h2{
+    color:#0b5574;
+    font-size:20px;
+}
+
+.logo-content p{
+    font-size:10px;
+    color:#666;
+}
+
+.nav-link{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-link a{
+    text-decoration:none;
+    color:#21345f;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.badge img{
+    width:80px;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    width:42px;
+    height:42px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:24px;
+}
+
+/* Notice Bar */
+
+.notice{
+    background:#6cb33f;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+    background-image:url("https://huroorkee.ac.in/_next/image?url=%2Fimages%2FWhy-Haridwar-University%2FTop-rank-University.jpg&w=3840&q=75");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.overlay{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#6cb33f;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:5px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.top-container{
+    flex-direction:column;
+    gap:10px;
+}
+
+.hamburger{
+    display:flex;
+}
+
+.nav-link{
+    position:absolute;
+    top:110px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    gap:0;
+    display:none;
+}
+
+.nav-link li{
+    border-bottom:1px solid #eee;
+}
+
+.nav-link a{
+    display:block;
+    padding:15px;
+}
+
+#menu-toggle:checked ~ .nav-link{
+    display:flex;
+}
+
+.overlay h1{
+    font-size:42px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Top Bar -->
+
+<div class="top-bar">
+    <div class="top-container">
+        <div>
+            📞 +91-9801012345
+        </div>
+
+        <div class="top-links">
+            <a href="#">Apply Now</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx_JTf-9puhCzWK2f3KYli5CvqtSNTPdBZJg&s">
+
+            <div class="logo-content">
+                <h2>Haridwar University</h2>
+                <p>(Committed to Excellence in Education)</p>
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <ul class="nav-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Student Corner</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Placement</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Alumni</a></li>
+        </ul>
+
+        <div style="display:flex;align-items:center;gap:15px;">
+            <div class="badge">
+                <img src="https://huroorkee.ac.in/_next/image?url=%2Fimages%2Flogos%2F16years.png&w=256&q=75">
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                ☰
+            </label>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Notice Bar -->
+
+<div class="notice">
+    Admissions Open 2026 – Top Placement University
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <h1>
+            Welcome to <br>
+            Haridwar University, <br>
+            Uttarakhand
+        </h1>
+
+        <p>
+            Empowering minds, shaping futures through excellence in education
+        </p>
+
+        <a href="#" class="btn">
+            Explore Programs
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
