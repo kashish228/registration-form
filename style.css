@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#111111;
+    color:white;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.content{
+    max-width:700px;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid #333;
+    border-radius:30px;
+    color:#b3b3b3;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:70px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+p{
+    color:#b3b3b3;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.primary{
+    background:white;
+    color:black;
+}
+
+.secondary{
+    border:1px solid #333;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:45px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:200px;
+        text-align:center;
+    }
+}
